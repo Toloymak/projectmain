@@ -1,0 +1,25 @@
+@model Web.Models.Lightbox.Forms.ContainerEditFormModel
+
+    <div>
+        <p >Заголовок контейнера</p>
+        <input type="text" name="text" id="container_text" value="@Model.Container.Text"/>
+    </div>
+    <div>
+        <p >Родительский блок</p>
+        <select name="blockId" id="container_block_id">
+            @foreach (var block in Model.GetBlocksList())
+            {
+                <option value="@block.BlockId">@block.BlockId — @block.Title</option>
+            }
+        </select>
+        <script>
+            $('#container_block_id').val(@Model.Container.BlockId);
+        </script>
+    </div>
+
+    <div>
+        <p >Приоритет:</p>
+        <input type="number" name="priority" id="container_priority" value="@Model.Container.Priority"/>
+    </div>
+
+    <input class="hidden" type="number" name="containerId" id="container_id" value="@Model.Container.ContainerId"/>

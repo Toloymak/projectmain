@@ -1,0 +1,19 @@
+@model Web.Models.Lightbox.Forms.DutyEditLightboxModel
+
+<div>
+    <p class="input_label">Дежурный:</p>
+    <select name="personId">
+        @foreach (var person in Model.PersonList)
+        {
+            <option value="@person.PersonId">@person.Name</option>
+        }
+    </select>
+</div>
+<div>
+    <p class="input_label">Дата начала:</p>
+    <input type="date" name="beginDate" id="block_title" value=""/>
+</div>
+<div>
+    <p class="input_label">Дата окончания:</p>
+    <input type="date" name="endDate" id="block_title" value=""/>
+</div>

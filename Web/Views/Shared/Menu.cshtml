@@ -1,0 +1,37 @@
+<link rel="stylesheet" href="~/css/Menu/DropdownMenu.css"/>
+
+<div class="top-menu">
+    <div class="top-menu-items">
+        <div class="header_block" title="Портал проекта">
+            <a href="/">
+                <span class="header_text">@Resource.CompanyName.ToLower()</span>
+                <span class="header_text dot">.</span>
+                <span class="header_text factoring_logo">@Resource.ProjectName.ToLower()</span>
+                <span class="header_text section">портал</span>
+            </a>
+        </div>
+
+        <div class="menu-button" title="Контур.Факторинг" onclick="menu_action()">
+            <p>Меню</p>
+        </div>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            
+            <div class="menu-row"><a class="menu-link" href="/">Главная</a><br/></div>
+            <div class="menu-line"></div>
+            <div class="menu-row"><a class="menu-link" href="/homeEdit/index">Редактировать главную</a><br/></div>
+            <div class="menu-line"></div>
+            <div class="menu-row"><a class="menu-link">Дежурства - скоро!</a><br/></div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function menu_action() {
+        var menu_
+        if ($(".dropdown-menu").is(':hidden')) {
+            $(".dropdown-menu").show();
+        } else {
+            $(".dropdown-menu").hide();
+        }
+    }
+</script>

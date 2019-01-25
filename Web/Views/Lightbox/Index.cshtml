@@ -1,0 +1,25 @@
+@model Web.Models.Lightbox.LightboxModel
+
+@{
+    Layout = null;
+}
+
+<link rel="stylesheet" href="~/css/lightbox.css" />
+
+<div class="lightbox-wrap">
+    <div class="lightbox-container">
+        <div class="lightbox-content-container"> 
+            <div style="width: 610px" class="lightbox-window">
+                <div class="js-lightbox-markup-close lightbox-close"></div>
+                <div class="lightbox-header">@Model.Title</div>
+                <div class="lightbox-content">
+                    @Html.Partial("ContentBlock.cshtml", Model)
+                </div>
+                
+                <div class="lightbox-footer">
+                    @Html.Partial("ButtonBlock.cshtml", Model)
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

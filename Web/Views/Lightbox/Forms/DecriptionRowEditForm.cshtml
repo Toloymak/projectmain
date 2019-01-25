@@ -1,0 +1,14 @@
+@model Web.Models.Lightbox.Forms.DecriptionRowEditFormModel
+
+    <div>
+        <p class="input_label">Описание:</p>
+        <input type="text" name="description" id="description_row_description" value="@Model.Row.Description"/>
+    </div>
+
+
+    <input class="hidden" type="number" name="container" id="description_row_container_id" value="@Model.Row.ContainerId"/>
+    <input class="hidden" type="number" name="priority" id="description_row_priority" value="@Model.Row.Priority"/>
+    <input class="hidden" type="text" name="link" id="description_row_link" value="@Model.Row.Link"/>
+    <input class="hidden" type="text" name="text" id="description_row_text" value="@Model.Row.Text"/>
+
+    <input class="hidden" type="number" name="rowId" id="description_row_id" value="@Model.Row.RowId"/>

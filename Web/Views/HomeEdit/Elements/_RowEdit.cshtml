@@ -1,0 +1,14 @@
+@model DataLayer.Models.Row.Row
+
+
+<div class="row_structure">
+    <b>Cсылка:</b> @Model.Link,
+    <b>Текст:</b> @Model.Text,
+    <b>Описание:</b> @Model.Description,
+    <b>Приоритет:</b> @Model.Priority,
+
+    <a href="javascript:CallLightbox('row', @Model.RowId)">
+        Изменить
+    </a>
+
+</div>

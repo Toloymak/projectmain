@@ -1,0 +1,8 @@
+@model DataLayer.Models.Container.Container
+
+<div class="container_structure">
+<b>Текст:</b> @Model.Text, <b>Приоритет:</b> @Model.Priority
+<a href="javascript:CallLightbox('container', @Model.ContainerId)">
+    Изменить
+</a>
+</div>

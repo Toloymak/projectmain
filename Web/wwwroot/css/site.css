@@ -1,0 +1,167 @@
+﻿.page {
+    width: 1300px;
+    margin: auto;
+}
+
+.content {
+    padding: 13px 30px 11px;
+    margin-bottom: 2px;
+    background-color: #fff;
+    box-shadow: 0 1px 6px 0 rgba(0, 0, 0, .05), 0 1px 1px 0 rgba(0, 0, 0, .05);
+    display: block;
+    position: relative;
+    font-family: Open Sans, Tahoma, Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    border-radius: 8px;
+}
+
+h2 {
+    margin: 0px;
+}
+
+.block {
+    margin: 25px;
+    box-sizing: border-box;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.title {}
+
+.List {
+    overflow: auto;
+}
+
+.row {
+    display: flow-root;
+    margin: 10px;
+}
+
+.link {
+    float: left;
+    padding-right: 10px;
+}
+
+.description {
+    float: right;
+    color: grey;
+    overflow: hidden;
+    transition: 3s;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 50%;
+}
+
+
+a,
+a:visited {
+    color: #2653c1;
+    text-decoration: none;
+}
+
+a:hover{
+    opacity: 0.7;
+}
+
+h2{
+    font-family: Open Sans,Tahoma,Arial,Helvetica,sans-serif;
+    font-weight: 400;
+    font-size: 26px;
+}
+
+body {
+    background: #F1EFED;
+    margin: 0px;
+}
+
+
+.hidden{
+    display: none;
+}
+
+
+.right-block {
+    width: 500px;
+}
+
+.left-block {
+    width: 700px;
+}
+
+.unvisible{
+    color: white;
+    transition: 2s;
+}
+
+.unvisible:hover{
+    color: darkgrey;
+    transition: 2s;
+    cursor: default;
+}
+.header-icon{
+    width: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+input{
+    -webkit-appearance: none;
+    -webkit-font-smoothing: antialiased;
+    appearance: none;
+    background-color: #fff;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: #333;
+    display: inline-block;
+    font-size: 13px;
+    font-smoothing: antialiased;
+    font-weight: 400;
+    height: 28px;
+    line-height: 1.35;
+    margin: 0;
+    outline: none;
+    outline: 0;
+    overflow: hidden;
+    padding: 0 9px;
+    position: relative;
+    text-align: left;
+    text-decoration: none;
+    vertical-align: baseline;
+    white-space: nowrap;
+    width: 100%;
+}
+
+.input_label{
+    color: #333;
+    display: inline-block;
+    font-weight: 600;
+    line-height: 18px;
+    font-size: 14px;
+    font-family: Open Sans,Tahoma,Arial,Helvetica,sans-serif;
+}
+
+.lightbox-header{
+    font-family: Open Sans,Tahoma,Arial,Helvetica,sans-serif;
+    font-weight: 400;
+    font-size: 26px;
+}
+
+.container_title {
+    font-size: 15px;
+    color: #999;
+    margin-left: 30px;
+}
+
+.edit-button
+{
+    width: 25px;
+    height: 25px;
+}

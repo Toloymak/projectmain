@@ -1,0 +1,10 @@
+@model DataLayer.Models.Block.Block
+
+<div class="block_structure">
+    <b>Блок:</b> @Model.Title,
+    <b>Солбец:</b> @Model.Column,
+    <b>Приоритет:</b> @Model.Priority
+    <a href="javascript:CallLightbox('block', @Model.BlockId)">
+        Изменить
+    </a>
+</div>

@@ -1,0 +1,25 @@
+@model Web.Models.Lightbox.Forms.BlockEditFormModel
+
+    <div>
+        <p class="input_label">Название блока:</p>
+        <input type="text" name="title" id="block_title" value="@Model.Block.Title"/>
+    </div>
+    <div>
+        <p class="input_label">Столбец</p>
+        <select name="column" id="block_column" >
+            <option>1</option>
+            <option>2</option>
+        </select>
+        <script>
+            $('#block_column').val(@Model.Block.Column);
+        </script>
+    </div>
+    <div>
+        <p class="input_label">Приоритет:</p>
+        <input type="number" name="priority" id="block_priority" value="@Model.Block.Priority"/>
+    </div>
+
+    <input class="hidden" type="number" name="BlockId" id="block_block_id" value="@Model.Block.BlockId"/>
+
+    <input class="hidden" type="number" name="block_division_id" value="1" value="@Model.Block.DivisionId"/>
+

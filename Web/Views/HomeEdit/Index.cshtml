@@ -1,0 +1,49 @@
+@using DataLayer.Models.Block
+@using DataLayer.Tables
+@using Web.Models.Edit
+@using Web.Models.Lightbox
+@model HomeEditModel
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+<style type="text/css">.block_structure { }</style>
+
+<link rel="stylesheet" href="~/css/Edit.css"/>
+<script src="/js/lightbox.js"> </script>
+
+
+<h1>Страница редактирования</h1>
+<a onclick="CallLightbox('block', 0)">Создать блок</a>
+—
+<a onclick="CallLightbox('container', 0)">Создать контейнер</a>
+—
+<a onclick="CallLightbox('row', 0)">Создать строку</a>
+<br>
+<br>
+<br>
+@foreach (var block in Model.GetBlocks())
+{
+    <br>
+    <div class="content">
+
+            @Html.Partial("Elements/_BlockEdit", block)
+        @foreach (var container in Model.GetContainers(block.BlockId))
+        {
+                @Html.Partial("Elements/_ContainerEdit", container)
+            foreach (var row in Model.GetRows(container.ContainerId))
+            {
+                <div class="row_structure">
+                    @Html.Partial("Elements/_RowEdit", row)
+                </div>
+            }
+        }
+    </div>
+}
+
+
+
+<div id="lightbox_space">
+    
+</div>

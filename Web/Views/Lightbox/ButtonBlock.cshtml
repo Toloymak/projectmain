@@ -1,0 +1,17 @@
+@using Web.Models.Lightbox
+@model Web.Models.Lightbox.LightboxModel
+
+@if (Model.IsCreate)
+{
+    <button class="button button-primary" onclick="SendLightbox(@Model.GetUpdateUrl())">Создать</button>
+}
+else
+{
+    <button class="button button-primary" onclick="SendLightbox(@Model.GetUpdateUrl())">Изменить</button>
+    if (Model.Type != LightboxType.Type.DescriptionRow)
+    {
+        <button class="button button-primary" onclick="SendLightbox(@Model.GetDeleteUrl())">Удалить</button>
+    }
+}
+
+<button class="button" id="Close" onclick="HideLightbox()">Отменить</button>

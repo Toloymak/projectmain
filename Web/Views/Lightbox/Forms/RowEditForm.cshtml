@@ -1,0 +1,36 @@
+@model Web.Models.Lightbox.Forms.RowEditModel
+
+    <div>
+        <p class="input_label">Ссылка</p>
+        <input type="text" name="link" id="row_link" value="@Model.Row.Link"/>
+    </div>
+
+    <div>
+        <p class="input_label">Текст ссылки</p>
+        <input type="text" name="text" id="row_text" value="@Model.Row.Text"/>
+    </div>
+
+    <div>
+        <p class="input_label">Описание</p>
+        <input type="text" name="description" id="row_description" value="@Model.Row.Description"/>
+    </div>
+
+    <div>
+        <p class="input_label">Родительский контейнер</p>
+        <select name="container" id="row_container_id">
+            @foreach (var container in Model.GetContainersList())
+            {
+                <option value="@container.ContainerId">@container.ContainerId — @Model.GetBlockName(container.BlockId) — @container.Text</option>
+            }
+        </select>
+        <script>
+            $('#row_container_id').val(@Model.Row.ContainerId);
+        </script>
+    </div>
+
+    <div>
+        <p class="input_label">Приоритет:</p>
+        <input type="number" name="priority" id="row_priority" value="@Model.Row.Priority"/>
+    </div>
+
+    <input class="hidden" type="number" name="rowId" id="row_id" value="@Model.Row.RowId"/>

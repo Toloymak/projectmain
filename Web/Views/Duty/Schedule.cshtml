@@ -1,0 +1,47 @@
+@using Web.Models.Duty
+@model Web.Models.Duty.ScheduleModel
+
+<link rel="stylesheet" href="~/css/Edit.css"/>
+<script src="/js/lightbox.js"> </script>
+
+<div class="left">
+
+    <div class="block left-block">
+        <div class="content">
+            @foreach (var duty in Model.DutyScheduleList)
+            {
+                <div>
+                    @{
+                        var dutyState = Model.CheckActual(duty.BeginDate, duty.EndDate);
+                        switch (dutyState)
+                        {
+                            case ScheduleModel.DutyState.Old:
+                                break;
+                            case ScheduleModel.DutyState.Current:
+                                break;
+                            case ScheduleModel.DutyState.Feature:
+                                break;
+                        }
+                    }
+
+
+
+                    @duty.BeginDate.ToString("dd.MM.yy") — @duty.EndDate.ToString("dd.MM.yy") — @Model.GetPersonName(duty.PersonId)
+
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+<div class="right">
+    <div class="block right-block">
+        <div class="content">
+
+            <button onclick="CallLightbox('duty', 0)">
+                Добавить дежурство
+            </button>
+
+        </div>
+    </div>
+</div>

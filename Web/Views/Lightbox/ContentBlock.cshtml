@@ -1,0 +1,42 @@
+@using Microsoft.AspNetCore.Mvc.Razor.Extensions
+@using Web.Models.Lightbox
+@using Web.Models.Lightbox.Forms
+@model Web.Models.Lightbox.LightboxModel
+
+
+
+
+<div class="send-error"></div>
+
+<form id="EditElement">
+
+@if (Model.Type == LightboxType.Type.Block)
+{
+    @Html.Partial("Forms/BlockEditForm", new BlockEditFormModel(Model.Id))
+}
+else if(Model.Type == LightboxType.Type.Container)
+{
+    @Html.Partial("Forms/ContainerEditForm", new ContainerEditFormModel(Model.Id))
+}
+else if (Model.Type == LightboxType.Type.Row)
+{
+    @Html.Partial("Forms/RowEditForm", new RowEditModel(Model.Id))
+}
+else if (Model.Type == LightboxType.Type.DescriptionRow)
+{
+    @Html.Partial("Forms/DecriptionRowEditForm", new DecriptionRowEditFormModel(Model.Id))
+}
+else if (Model.Type == LightboxType.Type.Duty)
+{
+    @Html.Partial("Forms/DutyEditForm", new DutyEditLightboxModel())
+}
+else if (Model.Type == LightboxType.Type.Person)
+{
+    @Html.Partial("Forms/PersonEditForm")
+}
+else
+{
+    <p>Ой, что-то сломалось!</p>
+}
+</form>
+
